@@ -1,0 +1,11 @@
+= simple_form_for(@store) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :sid
+    = f.input :sname
+    = f.input :stype
+    = f.input :sdescript
+
+  .form-actions
+    = f.button :submit

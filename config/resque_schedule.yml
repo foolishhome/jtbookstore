@@ -1,0 +1,6 @@
+do_mail_worker:
+  every: 3s
+  class: MailWorker
+  args:
+  description: Check The email box...
+

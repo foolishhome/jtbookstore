@@ -1,0 +1,13 @@
+%thead
+  %tr.info
+    %th index
+    %th bookname
+    %th bookdescription
+    %th bookprice
+%tbody
+  - @searchresult.each do |result|
+    %tr
+      %th= 1
+      %th= result.bname
+      %th= result.bdescript
+      %th= result.bprice

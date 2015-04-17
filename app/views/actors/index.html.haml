@@ -1,0 +1,31 @@
+%h1 Listing actors
+
+%table
+  %tr
+    %th Id
+    %th Name
+    %th Sex
+    %th Achievement
+    %th Points
+    %th Devote
+    %th Levels
+    %th
+    %th
+    %th
+
+  - @actors.each do |actor|
+    %tr
+      %td= actor.id
+      %td= actor.name
+      %td= actor.sex
+      %td= actor.achievement
+      %td= actor.points
+      %td= actor.devote
+      %td= actor.levels
+      %td= link_to 'Show', actor
+      %td= link_to 'Edit', edit_actor_path(actor)
+      %td= link_to 'Destroy', actor, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Actor', new_actor_path

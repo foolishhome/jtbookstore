@@ -1,0 +1,14 @@
+= simple_form_for(@actor) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :id
+    = f.input :name
+    = f.input :sex
+    = f.input :achievement
+    = f.input :points
+    = f.input :devote
+    = f.input :levels
+
+  .form-actions
+    = f.button :submit

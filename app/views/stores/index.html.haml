@@ -1,0 +1,25 @@
+%h1 Listing stores
+
+%table
+  %tr
+    %th Sid
+    %th Sname
+    %th Stype
+    %th Sdescript
+    %th
+    %th
+    %th
+
+  - @stores.each do |store|
+    %tr
+      %td= store.sid
+      %td= store.sname
+      %td= store.stype
+      %td= store.sdescript
+      %td= link_to 'Show', store
+      %td= link_to 'Edit', edit_store_path(store)
+      %td= link_to 'Destroy', store, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Store', new_store_path

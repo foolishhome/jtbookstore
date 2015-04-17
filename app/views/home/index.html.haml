@@ -1,0 +1,20 @@
+%table#searchlist.table.table-hover
+  = render :partial => 'books/search', :locals => {:opt => 'init'}
+
+%h3 Home
+- @users.each do |user|
+  %p
+    User: #{link_to user.name, user}
+    %br
+
+.br
+%i.icon-off
+
+%table.table.table-striped
+  %tbody 'test range''
+  %tr
+    %td= link_to '发送邮件', sendmail_book_path(0)
+  %tr
+    %td 'xxxxxxxxx'
+
+

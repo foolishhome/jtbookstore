@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Sid:
+  = @store.sid
+%p
+  %b Sname:
+  = @store.sname
+%p
+  %b Stype:
+  = @store.stype
+%p
+  %b Sdescript:
+  = @store.sdescript
+
+= link_to 'Edit', edit_store_path(@store)
+\|
+= link_to 'Back', stores_path

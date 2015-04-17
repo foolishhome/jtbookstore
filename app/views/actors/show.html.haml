@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Id:
+  = @actor.id
+%p
+  %b Name:
+  = @actor.name
+%p
+  %b Sex:
+  = @actor.sex
+%p
+  %b Achievement:
+  = @actor.achievement
+%p
+  %b Points:
+  = @actor.points
+%p
+  %b Devote:
+  = @actor.devote
+%p
+  %b Levels:
+  = @actor.levels
+
+= link_to 'Edit', edit_actor_path(@actor)
+\|
+= link_to 'Back', actors_path
